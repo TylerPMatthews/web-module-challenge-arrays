@@ -29,6 +29,7 @@ var originalFlavors = ["Banana Nut Fudge",
     "Strawberry",
     "Vanilla",
     "Vanilla Burnt Almond"]
+    
 
      /* Task 1: Confirm that the array is exactly 31 flavors. Your function should accept:
 
@@ -41,23 +42,16 @@ To save you from having to count the items above, you can assume that length of 
 i.e. is31Flavors(originalFlavors) will return TRUE.*/
 
     /*code here*/
+    let confirmFlavors = () => {
+        if(originalFlavors.length === 31) {
+            return true;
+        }else{
+            return false;
+            
+        }
+    };
+    confirmFlavors(originalFlavors)
 
-
-
-
-
-function is31Flavors(array1){
-if(array1.length === 31){
-      return true; 
-  }else{
-      return false; 
-  }
-}
-  console.log(is31Flavors(originalFlavors))
- 
-
-
- 
  
 /* Task 2: Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
 
@@ -70,11 +64,12 @@ Your function should add the flavor to the front of the array and console.log th
 
 For example addFlavor("Rainbow Sherbert", originalFlavors) should return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"] */ 
 
-function addFlavor(newFlavor, array){
-     array.unshift(newFlavor);
-    console.log(array)
+let addFlavor = (flavor,array1) => {
+return array1.unshift(flavor);
+console.log(array1);
 }
-addFlavor("Rainbow Sherbert", originalFlavors)
+addFlavor('Rainbow Sherbert', originalFlavors);
+console.log(originalFlavors)
 
 
     
@@ -94,12 +89,11 @@ Your function should accept:
 Your function should remove a flavor from the end of the array and console.log the resulting array.
 
 For example removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]*/ 
-function removeLastFlavor(oldFlavor,array){
-    array.pop(oldFlavor);
-     console.log(array);
- }
-removeLastFlavor("Strawberry", originalFlavors)
-
+let removeLastFlavor = (arr2) => {
+arr2.pop()
+}
+removeLastFlavor(originalFlavors);
+console.log(originalFlavors);
 
     
 
@@ -113,11 +107,10 @@ Your function should accept:
 
 For example, getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully. */
 
-    function getFlavorByIndex(array,flavor){
-        index.of(array)
-     console.log(flavor);
- }
- getFlavorByIndex(originalFlavors, 2)
+    let getFlavorByIndex = (arr3) => {
+    arr3.indexOf()
+    }
+    getFlavorByIndex(originalFlavors,3);
     
 
     
@@ -139,11 +132,11 @@ Hint: You can use .splice() for this
 
 */
 
-function removeFlavorByName(flavorName,array){
-    array.splice(flavorName);
-    console.log(array);
-}
-removeFlavorByName('Vanilla',originalFlavors);
+let removeFlavorByName = (arr4,flavor2) => {
+    arr4.splice(flavor2,2)
+};
+removeFlavorByName(originalFlavors,'Vanilla');
+console.log(originalFlavors);
 
     /*code here*/
 
@@ -158,12 +151,13 @@ Your function should accept:
 
 and should return a new array that is identical to the old array. You can name the new array however you'd like. */
 
-// function Copy(original,cP){
-//     let cP = [...original];
-//     console.log(cP);
-// }
-// Copy(originalFlavors,newFlowers)
-    
+let makeCopy = (original1,copy1) => {
+copy1 = [...original1];
+
+}
+makeCopy(originalFlavors,originalFlavors1);
+
+
 
 
 
@@ -182,11 +176,13 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
 
-function filterByWord(/*code here*/){
-
-    /*code here*/
-
+let filterByWord = (arr5) => {
+    console.log(arr5.includes(''))
 }
+filterByWord(originalFlavors,'chocolate');
+console.log(originalFlavors)
+
+
 
 
 
